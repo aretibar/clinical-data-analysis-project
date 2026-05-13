@@ -114,6 +114,7 @@ plt.title("Change in Systolic BP from Baseline to Month 3 by Treatment")
 plt.ylabel("SBP change (month3 - baseline)")
 plt.xlabel("Treatment group")
 plt.tight_layout()
+plt.savefig("sbp_change_boxplot.png")
 plt.show()
 
 # 11. VISUALIZATION: RESPONSE RATE BY TREATMENT GROUP
@@ -133,6 +134,7 @@ plt.title("Responder Rate by Treatment Group")
 plt.ylabel("Proportion of Responders")
 plt.xlabel("Treatment group")
 plt.tight_layout()
+plt.savefig("responder_rate_barplot.png")
 plt.show()
 
 # 12. STATISTICAL TESTING

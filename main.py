@@ -1,16 +1,19 @@
-# This is a sample Python script.
+import pandas as pd
+import matplotlib.pyplot as plt
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+df = pd.read_csv("data/sample_clinical_data.csv", sep=",")
 
+print(df.columns)
+print(df.head())
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+plt.figure(figsize=(8,5))
 
+plt.plot(df["Patient_ID"], df["Cholesterol"], marker="o")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+plt.xlabel("Patient ID")
+plt.ylabel("Cholesterol")
+plt.title("Cholesterol Levels by Patient")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+plt.savefig("cholesterol_chart.png")
+
+plt.show()
